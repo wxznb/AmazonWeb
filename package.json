@@ -1,0 +1,37 @@
+{
+  "name": "AmazonWeb",
+  "version": "1.0.0",
+  "description": "AmazonWeb",
+  "main": "index.js",
+  "repository": "git@github.com:wxznb/AmazonWeb.git",
+  "author": "sarusama <ld839183343@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --config build/webpack.dev.conf.js"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "history": "^4.9.0",
+    "prop-type": "^0.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^0.23.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  }
+}
