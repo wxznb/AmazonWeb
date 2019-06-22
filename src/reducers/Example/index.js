@@ -1,6 +1,6 @@
 import {
     EXAMPLE
-} from "../../actions/type.js";
+} from "@/actions/type.js";
 
 let example = (state = "example", action) => {
     switch(action.type) {

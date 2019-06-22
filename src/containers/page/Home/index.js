@@ -5,19 +5,23 @@ import {
     connect
 } from "react-redux";
 import {
-    exampleAction
+    // exampleAction,
+    getAmazonDomain
 } from "@/actions/index.js";
 
 class Home extends Component {
     constructor (props) {
         super(props);
+
+        this.states = {};
     }
     componentDidMount () {
         const {
             dispatch
         } = this.props;
 
-        dispatch(exampleAction());
+        // dispatch(exampleAction());
+        dispatch(getAmazonDomain());
     }
     render () {
         return <div>
@@ -28,11 +32,13 @@ class Home extends Component {
 
 const mapStatesToProps = (state) => {
     const {
-        example
+        // example,
+        amazonDomain
     } = state;
 
     return {
-        example
+        // example,
+        amazonDomain
     };
 };
 
