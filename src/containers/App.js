@@ -9,7 +9,8 @@ import {
 import React from "react";
 import {
     Home,
-    Main
+    Main,
+    AmazonUI
 } from "./page";
 import "./App.css";
 
@@ -28,6 +29,12 @@ const Routes = () => <Router
                 component = {
                     Home
                 }/>
+            <Route
+                path = "/AmazonUI"
+                component = {
+                    AmazonUI
+                }
+                />
         </div>
     </Router>;
 
