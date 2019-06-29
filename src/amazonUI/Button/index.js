@@ -6,7 +6,7 @@ class Button extends Component {
     constructor (props) {
         super(props);
 
-        this.states = {};
+        this.state = {};
     }
     render () {
         return <div

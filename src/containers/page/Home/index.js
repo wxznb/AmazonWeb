@@ -13,7 +13,7 @@ class Home extends Component {
     constructor (props) {
         super(props);
 
-        this.states = {};
+        this.state = {};
     }
     componentDidMount () {
         const {
