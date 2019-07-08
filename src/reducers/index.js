@@ -2,7 +2,7 @@ import {
     example
 } from "./Example";
 import {
-    amazonDomain
+    amazonDomains
 } from "./Domain";
 import { 
     combineReducers 
@@ -10,5 +10,5 @@ import {
 
 export default combineReducers({
     example,
-    amazonDomain
+    amazonDomains
 });

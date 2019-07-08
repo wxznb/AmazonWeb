@@ -20,7 +20,8 @@ const Routes = () => <Router
     }>
         <div>
             <Route 
-                path = "*"
+                path = "/"
+                exact
                 component = {
                     Main
                 }/>

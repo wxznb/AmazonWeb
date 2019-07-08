@@ -2,10 +2,10 @@ import {
     exampleAction
 } from "./Example";
 import {
-    getAmazonDomain
+    getAmazonDomains
 } from "./Domain";
 
 export {
     exampleAction,
-    getAmazonDomain
+    getAmazonDomains
 };

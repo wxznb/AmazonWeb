@@ -5,27 +5,60 @@ import {
     connect
 } from "react-redux";
 import {
+    Select
+} from "@/amazonUI";
+import {
     // exampleAction,
-    getAmazonDomain
+    getAmazonDomains
 } from "@/actions/index.js";
+
+const Option = Select.Option;
 
 class Home extends Component {
     constructor (props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            options: []
+        };
+        this.options = this.options.bind(this);
     }
     componentDidMount () {
         const {
             dispatch
         } = this.props;
 
-        // dispatch(exampleAction());
-        dispatch(getAmazonDomain());
+        dispatch(getAmazonDomains());
+    }
+    componentWillMount () { }
+    changeSelect ( event ) {
+        console.log(event);
+    }
+    options () {
+        let {
+            amazonDomains
+        } = this.props;
+        let domainOptions = [
+            <Option
+                value = "" 
+                key = "default">--- Please Select ---</Option>
+        ];
+
+        amazonDomains.forEach(function ( amazon ) {
+            domainOptions.push(<Option
+                value = {amazon} 
+                key = {amazon}>{amazon}</Option>);
+        });
+
+        return domainOptions;
     }
     render () {
         return <div>
-            Home
+            <Select
+                value = ""
+                onChange = {this.changeSelect}>
+                {this.options()}
+            </Select>
         </div>;
     }
 }
@@ -33,12 +66,12 @@ class Home extends Component {
 const mapStatesToProps = (state) => {
     const {
         // example,
-        amazonDomain
+        amazonDomains
     } = state;
 
     return {
         // example,
-        amazonDomain
+        amazonDomains
     };
 };
 

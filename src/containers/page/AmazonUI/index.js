@@ -18,8 +18,20 @@ class UIPage extends Component {
 
         this.state = {};
     }
-    change (value) {
+    change ( value ) {
         console.log(value);
+    }
+    input ( event ) {
+        console.log("input");
+    }
+    focus ( event ) {
+        console.log("focus");
+    }
+    changeInput ( event ) {
+        console.log("changeInput");
+    }
+    blur ( event ) {
+        console.log("blur");
     }
     render () {
         return <div>
@@ -27,6 +39,10 @@ class UIPage extends Component {
             <Input
                 type = "text"
                 placeholder = "HI!"
+                onInput = { this.input }
+                onFocus = { this.focus }
+                onChange = { this.changeInput }
+                onBlur = { this.blur }
                 />
             <Image
                 src = "https://www.baidu.com/img/bd_logo1.png"

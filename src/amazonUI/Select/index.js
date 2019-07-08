@@ -9,13 +9,11 @@ class Select extends Component {
     constructor (props) {
         super(props);
         let value = props.value;
-        let children = props.children;
 
         this.state = {
             value,
             onChange: props.onChange,
-            showOptions: false,
-            children
+            showOptions: false
         };
         this.changeValue = this.changeValue.bind(this);
         this.click = this.click.bind(this);
@@ -24,6 +22,7 @@ class Select extends Component {
         let {
             showOptions
         } = this.state;
+
         this.setState({
             value,
             showOptions: !showOptions
@@ -43,9 +42,12 @@ class Select extends Component {
     render () {
         let {
             showOptions,
-            children,
             value
         } = this.state;
+        let {
+            children
+        } = this.props;
+
         let title = "";
 
         if ( children instanceof Array ) {
@@ -56,6 +58,8 @@ class Select extends Component {
                     title = children[i].props.children;
                 }
             }
+        } else if ( children instanceof Object ) {
+            title = children.props.children;
         }
 
         return <SelectValueContext.Provider value = {this.changeValue}>

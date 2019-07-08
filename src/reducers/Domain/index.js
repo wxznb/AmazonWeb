@@ -1,14 +1,14 @@
 import {
-    GETAMAZONDOMAIN
+    GETAMAZONDOMAINS
 } from "@/actions/type.js";
 
 const initialState = {
-    amazonDomain: []
+    amazonDomains: []
 };
 
-export const amazonDomain = function (state = initialState.amazonDomain, action) {
+export const amazonDomains = function (state = initialState.amazonDomains, action) {
     switch ( action.type ) {
-        case GETAMAZONDOMAIN:
+        case GETAMAZONDOMAINS:
             return action.data;
         default:
             return state;
