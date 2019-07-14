@@ -54,6 +54,7 @@ class Input extends Component {
                 onChange = { this.change }
                 onFocus = { this.focus }
                 onBlur = { this.blur }
+                className = "input"
                 />
         </form>
     }

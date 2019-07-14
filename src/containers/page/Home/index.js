@@ -5,12 +5,14 @@ import {
     connect
 } from "react-redux";
 import {
-    Select
+    Select,
+    Input
 } from "@/amazonUI";
 import {
     // exampleAction,
     getAmazonDomains
 } from "@/actions/index.js";
+import "./index.css";
 
 const Option = Select.Option;
 
@@ -53,12 +55,16 @@ class Home extends Component {
         return domainOptions;
     }
     render () {
-        return <div>
+        return <div
+            className = "AmazonASINCode">
             <Select
                 value = ""
                 onChange = {this.changeSelect}>
                 {this.options()}
             </Select>
+            <Input
+                placeholder = "ASINCode"
+                />
         </div>;
     }
 }
